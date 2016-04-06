@@ -25,13 +25,16 @@ rm -rf pyqt4-windows
 mkdir pyqt4-windows
 7z x -opyqt4-windows "$INSTALLER_FILE"
 
+# XXX: The structure it unpacks seems to differ between Fedora on my machine
+# and Ubuntu on Travis. Maybe due to different versions of 7z?
+mv 'pyqt4-windows/$_OUTDIR/'*.pyd pyqt4-windows/Lib/site-packages/PyQt4/
+
 # Trim some unnecessary files
-rm -r pyqt4-windows/Lib/site-packages/PyQt4/doc
-rm -r pyqt4-windows/Lib/site-packages/PyQt4/examples
 rm -r pyqt4-windows/Lib/site-packages/PyQt4/assistant.exe
 rm -r pyqt4-windows/Lib/site-packages/PyQt4/designer.exe
 
 python3 make_wheel.py pyqt4-windows/Lib/site-packages/PyQt4
 
 rm -r pyqt4-windows
+df -h *
 echo "Done"
