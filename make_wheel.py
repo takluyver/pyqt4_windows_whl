@@ -15,7 +15,7 @@ metadata_template = """\
 Metadata-Version: 1.2
 Name: PyQt4_windows_whl
 Version: {version}
-Summary: Intelligently search Python source code
+Summary: Python bindings for the Qt cross platform GUI toolkit
 Home-page: https://github.com/takluyver/pyqt4_windows_whl
 License: UNKNOWN
 Author: Riverbank Computing
@@ -110,8 +110,8 @@ def main(argv=None):
     ap.add_argument('directory')
     args = ap.parse_args(argv)
 
-    if 'PYQT_VERSION' not in os.environ:
-        sys.exit('PYQT_VERSION environment variable not specified')
+    if 'PYQT_PKG_VERSION' not in os.environ:
+        sys.exit('PYQT_PKG_VERSION environment variable not specified')
 
     if 'PY_VERSION' not in os.environ:
         sys.exit('PY_VERSION environment variable not specified')
@@ -120,7 +120,7 @@ def main(argv=None):
         sys.exit('PY_BITNESS environment variable not specified')
 
     make_wheel(args.directory,
-                pyqt_version=os.environ['PYQT_VERSION'],
+                pyqt_version=os.environ['PYQT_PKG_VERSION'],
                 python_version=os.environ['PY_VERSION'],
                 bitness=int(os.environ['PY_BITNESS'])
     )

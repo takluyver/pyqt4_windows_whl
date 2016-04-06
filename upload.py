@@ -29,6 +29,7 @@ with open('pypirc', 'w') as f:
         password=os.environ['PYPI_PASSWD'],
     ))
 
-subprocess.call(['twine', 'upload', '--config-file', 'pypirc', filename])
-
-os.unlink('pypirc')
+try:
+    subprocess.check_call(['twine', 'upload', '--config-file', 'pypirc', filename])
+finally:
+    os.unlink('pypirc')

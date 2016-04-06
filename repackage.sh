@@ -4,7 +4,6 @@
 
 set -e
 
-
 if [ -z "$PY_VERSION"]; then
   export PY_VERSION=3.4
 fi
