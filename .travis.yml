@@ -6,6 +6,11 @@ env:
     # PYPI_PASSWD:
     - secure: "BSHHNTHXyMYYbKY2aLrA/gcIaCUXzTf2rTCt52Lb7liR4Vqcbt3LOppPJxCyZoVPOCYuRL621Gwxy6Eue+qK+5eSS9QXm61G8s9sU/Pkdz19toFuzqfOEChpgvzCUDJ7w4zQnBuHcOOq6mi5Y/9rGbYbqJpgQh8H9c4sToQ25DlItSjh6h50WruCLiSxxP7+xXe4pc1B54L11XVWVuCLm2UWNmGxSEMKB4w+vPnrrIlp/Hhbb0ebrWd9KHDY6iq8WGCFLVC2xAB8FBfvSrjITd5cv21i9uCCpHdzko+zD97VV2gv720JmAiFojZ4hRLfK3T+hVMzymAqs+E7VT8Ee9/PuaYdKOYE5LNLpP6hSp4a2uPR/2czFeVKGREz1GEfMu365/Hj1Hk3bPukFPy9Dvwu0vApJaOGJq5EEBRINE5OiIDIwgrMyoXleVU9hvNHCxaSzoHFdLlmEu7RXkUdB+dcJs1nSwP0Ktb326+k1a2RC+E0nMeksQroyyaJSRl14vyn5vgHc8zXnOw19U9hme/FUo0th5OtGFQJzed5RHQ+fhWx3a7zDCbexE5Q6R58YT+vxKKU6Ez/hJWi2oYScrX+21qrqmEfAS6JsSnRPIKEcQEmRdQ4n8Q6VMQSimgpygZPqk8QnKr75ZpHNV1Eq7ggFb33+2EtQ+QKr6oho7M="
     - PYPI_USERNAME=pyqt_win_whl_uploader
+  matrix:
+    - PY_VERSION=3.4 PY_BITNESS=32
+    - PY_VERSION=3.4 PY_BITNESS=64
+    - PY_VERSION=2.7 PY_BITNESS=32
+    - PY_VERSION=2.7 PY_BITNESS=64
 # command to install dependencies
 before_install:
   - sudo apt-get update -qq
