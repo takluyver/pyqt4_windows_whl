@@ -33,6 +33,9 @@ mv 'pyqt4-windows/$_OUTDIR/'*.pyd pyqt4-windows/Lib/site-packages/PyQt4/
 rm -r pyqt4-windows/Lib/site-packages/PyQt4/assistant.exe
 rm -r pyqt4-windows/Lib/site-packages/PyQt4/designer.exe
 
+# Clear away anything from previous run
+rm -r *.whl
+
 python3 make_wheel.py pyqt4-windows/Lib/site-packages/PyQt4
 
 rm -r pyqt4-windows
