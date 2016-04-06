@@ -36,5 +36,5 @@ rm -r pyqt4-windows/Lib/site-packages/PyQt4/designer.exe
 python3 make_wheel.py pyqt4-windows/Lib/site-packages/PyQt4
 
 rm -r pyqt4-windows
-df -h *
+du -h *
 echo "Done"
