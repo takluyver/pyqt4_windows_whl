@@ -15,4 +15,3 @@ install:
 # command to run tests
 script:
   - ./repackage.sh
-  - python upload.py

@@ -30,3 +30,5 @@ with open('pypirc', 'w') as f:
     ))
 
 subprocess.call(['twine', 'upload', '--config-file', 'pypirc', filename])
+
+os.unlink('pypirc')
