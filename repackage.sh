@@ -4,9 +4,15 @@
 
 set -e
 
-export PY_VERSION=3.4
+
+if [ -z "$PY_VERSION"]; then
+  export PY_VERSION=3.4
+fi
+if [ -z "$PY_BITNESS"]; then
+  export PY_BITNESS=32
+fi
 export PYQT_VERSION=4.11.3
-export PY_BITNESS=32
+export PYQT_PKG_VERSION="$PYQT_VERSION.1"
 QT_VERSION=4.8.6
 
 INSTALLER_FILE=PyQt4-${PYQT_VERSION}-gpl-Py${PY_VERSION}-Qt${QT_VERSION}-x${PY_BITNESS}.exe
