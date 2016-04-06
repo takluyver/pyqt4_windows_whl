@@ -13,7 +13,7 @@ Tag: {tag}
 
 metadata_template = """\
 Metadata-Version: 1.2
-Name: PyQt4
+Name: PyQt4_windows_whl
 Version: {version}
 Summary: Intelligently search Python source code
 Home-page: https://github.com/takluyver/pyqt4_windows_whl
@@ -47,7 +47,7 @@ def make_wheel(folder, pyqt_version, python_version, bitness):
         py_version_nodot=python_version.replace('.', ''),
         win_tag=('win_amd64' if bitness==64 else 'win32'),
     )
-    filename = 'PyQt4-{version}-{tag}.whl'.format(
+    filename = 'PyQt4_windows_whl-{version}-{tag}.whl'.format(
         version=pyqt_version, tag=tag,
     )
 
@@ -81,7 +81,7 @@ def make_wheel(folder, pyqt_version, python_version, bitness):
             # Sorting to give a stable order
             dirnames.sort()
 
-        dist_info = 'PyQt4-{version}.dist-info/'.format(version=pyqt_version)
+        dist_info = 'PyQt4_windows_whl-{version}.dist-info/'.format(version=pyqt_version)
 
         print('Adding WHEEL file...')
         wheel_file = wheel_template.format(tag=tag).encode('utf-8')
