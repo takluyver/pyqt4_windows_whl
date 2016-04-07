@@ -31,6 +31,7 @@ with open('pypirc', 'w') as f:
 
 print('Calling twine to upload...')
 try:
+    subprocess.call(['twine', 'register', '--config-file', 'pypirc', filename])
     subprocess.check_call(['twine', 'upload', '--config-file', 'pypirc', filename])
 finally:
     os.unlink('pypirc')
