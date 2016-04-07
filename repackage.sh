@@ -40,6 +40,9 @@ python3 make_wheel.py pyqt4-windows/Lib/site-packages/PyQt4
 rm -r pyqt4-windows
 du -h *
 
+echo "Check wheel file..."
+wheel unpack *.whl
+
 echo "(Maybe) uploading..."
 python upload.py
 
