@@ -10,9 +10,9 @@ fi
 if [ -z "$PY_BITNESS"]; then
   export PY_BITNESS=32
 fi
-export PYQT_VERSION=4.11.3
-export PYQT_PKG_VERSION="$PYQT_VERSION.2"
-QT_VERSION=4.8.6
+export PYQT_VERSION=4.11.4
+export PYQT_PKG_VERSION="$PYQT_VERSION.1"
+QT_VERSION=4.8.7
 
 INSTALLER_FILE=PyQt4-${PYQT_VERSION}-gpl-Py${PY_VERSION}-Qt${QT_VERSION}-x${PY_BITNESS}.exe
 URL=http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-${PYQT_VERSION}/${INSTALLER_FILE}
