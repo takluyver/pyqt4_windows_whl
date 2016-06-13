@@ -18,7 +18,7 @@ index-servers =
     pypi
 
 [pypi]
-repository: https://warehouse.python.org/pypi
+repository: https://upload.pypi.io/legacy/
 username: {username}
 password: {password}
 """
