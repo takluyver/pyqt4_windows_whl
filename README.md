@@ -2,4 +2,4 @@ This machinery downloads PyQt4 windows binary installers from Sourceforge, reass
 
 The script runs [on Travis CI](https://travis-ci.org/takluyver/pyqt4_windows_whl), uploading when I include `+UPLOAD` in the commit message.
 
-The resulting wheels can be found here: https://pypi.io/project/PyQt4_windows_whl/
+The resulting wheels can be found here: https://pypi.org/project/PyQt4_windows_whl/
